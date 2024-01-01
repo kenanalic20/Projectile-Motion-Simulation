@@ -43,10 +43,7 @@ def projectile_motion(v, theta, y0, dt, g, randomness_factor):
     horizontal_distance = x[-1]
     total_time=abs(2*vy/g) 
 
-    print(f"Max Height: {max_height:.2f} meters at time {max_height_time:.2f} seconds")
-    print(f"Horizontal Distance: {horizontal_distance:.2f} meters")
-    print(f"Total Time: {total_time:.2f} seconds")
-    print(f"Total time:{total_time:.2f} seconds")
+    
     save_results_to_file(max_height, max_height_time, horizontal_distance,total_time, filename='results.txt')
     
     return np.array(x), np.array(y),total_time
@@ -87,7 +84,6 @@ with open('results.txt', 'a') as file:
     file.write(f"Average time: {average_time:.2f} seconds\n")
 
 
-print(f"Average Distance: {average_distance:.2f} meters")
 
 plt.title('Projectile Motion with Unpredictability')
 plt.xlabel('Horizontal Distance (m)')
